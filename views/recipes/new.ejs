@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>New Recipe</title>
+</head>
+<body>
+  <h1>Create a New Recipe</h1>
+  <form action="/recipes/new" method="post">
+    <div>
+      <input type="text" name="title"/>
+      <input type="text" name="Instructions">
+      <input type="text" name="Ingredients" value="">
+      <input type="text" name="Time" value="">
+      <input type="text" name="img link" value="">
+      <input type="text" name="Difficulty" placeholder="easy, medium, hard or expert">
+      <input type="boolean" name="Favorite" placeholder="true or false">
+      <input type="text" name="Tags" placeholder="chicken, beef, vegetarian, fish">
+    </div>
+
+    <button type="submit">Create Recipe</button>
+  </form>
+</body>
+</html>
