@@ -1,4 +1,5 @@
 // jshint esversion: 6
+require("dotenv").config();
 const knex = require('./db'),
       express = require('express'),
       app = express();
