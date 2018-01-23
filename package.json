@@ -1,0 +1,31 @@
+{
+  "name": "meal_planner_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "knex": "knex",
+    "postinstall": "knex migrate:latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkyletreman/meal_planner_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkyletreman/meal_planner_app/issues"
+  },
+  "homepage": "https://github.com/jkyletreman/meal_planner_app#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "knex": "^0.14.2",
+    "pg": "^7.4.1"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
+  }
+}
