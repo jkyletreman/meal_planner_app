@@ -1,6 +1,9 @@
 {
   "name": "meal_planner_app",
   "version": "1.0.0",
+  "engine": {
+    "node": "9.4.0"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
