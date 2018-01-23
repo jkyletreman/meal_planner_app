@@ -1,19 +1,19 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('Recipes', (table) => {
+  return knex.schema.createTable('recipes', (table) => {
     table.increments(); // add Serial #
-    table.string("Title", 255).notNull();
-    table.text("Instructions").notNull();
-    table.text("Ingredients").notNull();
-    table.string("Time").notNull();
-    table.text("img");
-    table.enu("Difficulty", ['easy', 'medium', 'hard', 'expert']).defaultTo('medium');
-    table.boolean("Favorite").defaultTo(false);
-    table.enu("Tags", ['chicken', 'beef', 'vegetarian', 'fish']).defaultTo('');
+    table.string("title", 255).notNull();
+    table.string("instructions").defaultTo("no instructions available"); // why is not null failing here?
+    table.string("ingredients").defaultTo("no ingredients available");
+    table.string("time").defaultTo("no time information available");
+    table.string("img");
+    table.enu("difficulty", ['easy', 'medium', 'hard', 'expert']).defaultTo('medium');
+    table.boolean("favorite").defaultTo(false);
+    table.enu("tags", ['chicken', 'beef', 'vegetarian', 'fish']);
     table.timestamps(true, true);
   });
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable("Recipes");
+  return knex.schema.dropTable("recipes");
 };
