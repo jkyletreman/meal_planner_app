@@ -8,7 +8,12 @@ const {
 } = require("../models/recipes");
 
 app.get('/', (req, res) => {
-  res.render('recipes/index');
+  findRecipes(req).then(recipes => {
+    res.format({
+      "text/html":() => res.render("recipes/index", { recipes }),
+      "application/json":() => res.json(recipes)
+    });
+  });
 });
 
 app.get('/new', (req, res) => {
