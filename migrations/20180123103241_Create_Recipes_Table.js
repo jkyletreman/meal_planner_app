@@ -1,7 +1,7 @@
 
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('Recipes', (table) => {
-    table.increments();
+    table.increments(); // add Serial #
     table.string("Title", 255).notNull();
     table.text("Instructions").notNull();
     table.text("Ingredients").notNull();

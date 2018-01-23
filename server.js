@@ -4,9 +4,12 @@ const knex = require('./db'),
       express = require('express'),
       morgan =require('morgan');
       bodyParser = require('body-parser');
-      app = express();
+
+const app = express();
 
 const PORT = process.env.PORT || '8000';
+
+const recipes = require('./routes/recipes');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -17,29 +20,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 // Routes
-app.get('/recipes', (req, res) => {
-  res.render('recipes/index');
-});
-
-app.get('/recipes/new', (req, res) => {
-  res.render('recipes/new');
-});
-
-app.get('/recipes/:id', (req, res) => {
-  res.render('recipes/show');
-});
-
-app.post('/recipes/new', (req, res) => {
-
-});
-
-app.patch('/recipes/:id', (req, res) => {
-  res.send('Working');
-});
-
-app.delete('/recipes/:id', (req, res) => {
-  res.send('Working');
-});
+app.use('/recipes', recipes);
 
 app.listen(PORT, () => {
   console.log(`Running on ${PORT}`);
