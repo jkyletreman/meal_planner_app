@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 // Routes
 app.get('/recipes', (req, res) => {
-  res.send('Working');
+  res.render('recipes/index');
 });
 
 app.get('/recipes/new', (req, res) => {
@@ -26,7 +26,7 @@ app.get('/recipes/new', (req, res) => {
 });
 
 app.get('/recipes/:id', (req, res) => {
-  res.send('Working');
+  res.render('recipes/show');
 });
 
 app.post('/recipes/new', (req, res) => {
