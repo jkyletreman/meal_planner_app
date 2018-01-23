@@ -1,7 +1,7 @@
 // jshint esversion: 6
 // require("dotenv").config();
 const knex = require('./db'),
-      express = require('express'),
+      express = require('express').Router(),
       morgan =require('morgan');
       bodyParser = require('body-parser');
       app = express();
