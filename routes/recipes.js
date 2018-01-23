@@ -3,6 +3,8 @@ const app = require('express').Router();
 
 const {
   createRecipe,
+  findRecipes,
+  findRecipe
 } = require("../models/recipes");
 
 app.get('/', (req, res) => {
@@ -14,7 +16,14 @@ app.get('/new', (req, res) => {
 });
 
 app.get('/:id', (req, res) => {
-  res.render('recipes/show');
+  findRecipe(req).then(recipes => {
+      const recipe = recipes[0];
+
+      res.format({
+      "text/html": () => res.render("recipes/show", { recipe }),
+      "application/json": () => res.json(recipe)
+    });
+  });
 });
 
 app.post('/new', (req, res) => {
