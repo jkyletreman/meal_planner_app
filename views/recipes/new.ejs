@@ -1,26 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/form.css">
   <title>New Recipe</title>
 </head>
-<body>
-  <h1>Create a New Recipe</h1>
-  <form action="/recipes/new" method="post">
-    <div>
-      <input type="text" name="title" placeholder="Title"/>
-      <input type="text" name="instructions" placeholder="Instructions">
-      <input type="text" name="ingredients" placeholder="Ingredients">
-      <input type="text" name="time" placeholder="Time">
-      <input type="text" name="img link" placeholder="img url">
-      <input type="text" name="difficulty" placeholder="easy, medium, hard or expert">
-      <input type="boolean" name="favorite" placeholder="true or false">
-      <input type="text" name="tags" placeholder="chicken, beef, vegetarian, fish">
-    </div>
 
-    <button type="submit">Create Recipe</button>
+<body>
+  <form action="/recipes/new" method="post">
+    <div class="form-wrapper">
+      <div class="form-inline row">
+        <label for="example-title-input" class="col-2 col-form-label">Title</label>
+        <div class="col-10">
+          <input class="form-control" type="text" name="title" value="Title" />
+        </div>
+      </div>
+      <div class="form-inline row">
+        <label for="example-instructions-input" class="col-2 col-form-label">Instructions</label>
+        <div class="col-10">
+          <input class="form-control" type="text" name="instructions" value="Instructions">
+        </div>
+      </div>
+      <div class="form-inline row">
+        <label for="example-ingredients-input" class="col-2 col-form-label">Ingredients</label>
+        <div class="col-10">
+          <input class="form-control" type="text" name="ingredients" value="Ingredients">
+        </div>
+      </div>
+      <div class="form-inline row">
+        <label for="example-time-input" class="col-2 col-form-label">Time</label>
+        <div class="col-10">
+          <input class="form-control" type="text" name="time" value="Time">
+        </div>
+      </div>
+      <div class="form-inline row">
+        <label for="example-img-input" class="col-2 col-form-label">Img link</label>
+        <div class="col-10">
+          <input class="form-control" type="text" name="img link" value="img url">
+        </div>
+      </div>
+      <div class="form-inline row">
+        <label for="example-difficulty-input" class="col-2 col-form-label">Difficulty</label>
+        <div class="col-10">
+          <input class="form-control" type="text" name="difficulty" value="easy, medium, hard or expert">
+        </div>
+      </div>
+      <div class="form-inline row">
+        <label for="example-favorite-input" class="col-2 col-form-label">Favorite</label>
+        <div class="col-10">
+          <input class="form-control" type="boolean" name="favorite" value="true or false">
+        </div>
+      </div>
+      <div class="form-inline row">
+        <label for="example-datetime-local-input" class="col-2 col-form-label">Tags</label>
+        <div class="col-10">
+          <input class="form-control" type="text" name="tags" placeholder="chicken, beef, vegetarian, fish">
+        </div>
+      </div>
+      <button type="submit">Create Recipe</button>
+    </div>
   </form>
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
+
 </html>
