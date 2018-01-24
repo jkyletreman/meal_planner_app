@@ -21,6 +21,9 @@ app.use(bodyParser.json());
 
 // Routes
 app.use('/recipes', recipes);
+app.use((err, req, res, next) => {
+  res.sendStatus(404);
+});
 
 app.listen(PORT, () => {
   console.log(`Running on ${PORT}`);
