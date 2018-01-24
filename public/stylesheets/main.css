@@ -1,0 +1,14 @@
+.large-recipe-card {
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.recipe-img {
+  max-width: 100% !important;
+}
+
+h1 {
+  text-align: center;
+}
