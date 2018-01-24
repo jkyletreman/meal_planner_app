@@ -1,3 +1,15 @@
+body {
+  background-color: rgb(106, 141, 184);
+}
+
+@media screen and (max-width: 600px) {
+  label {
+    visibility: hidden;
+    clear: both;
+    display: none;
+  }
+}
+
 .form-inline {
   padding-bottom: 2%;
 }
