@@ -21,6 +21,12 @@ app.get('/new', (req, res) => {
 });
 
 app.get('/:id', (req, res) => {
+  // If id is not a number
+  const id = req.params.id;
+  if (isNaN(id)) {
+    res.sendStatus(400);
+  }
+  // query DB for recipe
   findRecipe(req).then(recipes => {
       const recipe = recipes[0];
 
@@ -49,5 +55,7 @@ app.patch('/:id', (req, res) => {
 app.delete('/:id', (req, res) => {
   res.send('Working');
 });
+
+
 
 module.exports = app;
