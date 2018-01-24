@@ -4,12 +4,17 @@ body {
 
 @media screen and (max-width: 600px) {
   label {
-    visibility: hidden;
     clear: both;
+    display: none;
+  }
+  form {
+    margin: 0 auto;
+  }
+  .toggle {
     display: none;
   }
 }
 
-.form-inline {
+.form-group {
   padding-bottom: 2%;
 }
