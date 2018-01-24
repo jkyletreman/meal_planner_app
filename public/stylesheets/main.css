@@ -1,13 +1,16 @@
-.large-recipe-card {
+.card {
   max-width: 70%;
   margin: 0 auto;
   margin-bottom: 2%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.recipe-img {
-  max-width: 100% !important;
+img {
+  margin: 0 auto;
+  max-width: 100%;
 }
+
+/* @media screen and (max-width: ) */
 
 h1 {
   text-align: center;
