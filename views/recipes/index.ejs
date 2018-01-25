@@ -13,6 +13,14 @@
 <body>
   <div class="jumbotron">
     <h1 class="page-title">All Recipes</h1>
+    <div class="row nav-bar">
+      <div class="col-6">
+        <a class="center-me" href="/recipes/new">Create a New Recipe</a>
+      </div>
+      <div class="col-6">
+        <a class="center-me" href="/recipes/1">My Recipes</a>
+      </div>
+    </div>
   </div>
 
 
@@ -26,23 +34,21 @@
           <div class="col-8 card-information">
             <div class="row">
               <div class="col-12 card-title">
-                <p>
+                <h6>
                   <%= recipe.title %>
-                </p>
+                </h6>
                 <div class="row">
                   <div class="col-4 card-time">
-                    <p>
-                      <%= recipe.time %>
-                    </p>
+                    <p>Time: <%= recipe.time %></p>
                   </div>
                   <div class="col-4 card-diff">
                     <p>
-                      <%= recipe.difficulty %>
+                      Difficulty: <%= recipe.difficulty %>
                     </p>
                   </div>
                   <div class="col-4 card-fav">
                     <p>
-                      <%= recipe.favorite %>
+                      Fan Fav: <%= recipe.favorite %>
                     </p>
                   </div>
                 </div>
@@ -65,6 +71,7 @@
           </div>
         </div>
       </div>
+    </div>
       <% }) %>
 
 

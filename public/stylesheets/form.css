@@ -1,5 +1,17 @@
 body {
   background-color: rgb(106, 141, 184);
+  max-width: 70%;
+  max-height: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+form {
+  padding-top: 10%;
 }
 
 @media screen and (max-width: 600px) {
