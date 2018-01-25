@@ -13,7 +13,7 @@
 // grab all the ingredients into a array then search that?
 
 // use jquery to help complete the form
-function mapIngredients(convertData) {
+function mapIngredients(convertJsonToArray) {
    $("#ingredients").autofill( arr );
 }
 
