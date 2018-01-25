@@ -1,5 +1,5 @@
 // jshint esversion:6
-const app = require('knex').Router();
+const app = require('express').Router();
 
 const {
   createIngredient,
@@ -35,4 +35,4 @@ app.delete("/:id", (req, res) => {
   res.sendStatus(405);
 });
 
-modules.exports = app;
+module.exports = app;
