@@ -1,10 +1,15 @@
-// unlinked 
-$(window).on('resize', function() {
-    if ($(window).width() < 600) {
-        $('#toggle').removeClass('col-10');
-        $('#toggle').addClass('col-12')
-    } else {
-        $('#toggle').removeClass('col-12');
-        $('#toggle').addClass('col-10');
-    }
+// unlinked
+$(() => {
+  addIngredient.addEventListener('click', (e) => {
+    const ingredients = e.target.parentElement;
+    const ingredientInput = document.getElementById('ingredients_template').cloneNode();
+    const index = ingredients.querySelectorAll('.newIngredient').length;
+
+    ingredientInput.classList.add('newIngredient');
+    ingredientInput.setAttribute('name', `ingredient[${index}]`);
+    ingredientInput.setAttribute('type', 'text');
+    ingredientInput.setAttribute('list', "suggestions")
+
+    ingredients.prepend(ingredientInput);
+  })
 });

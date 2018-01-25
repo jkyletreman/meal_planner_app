@@ -5,7 +5,7 @@ const knex = require('../db');
 function createRecipe({ body : { title, instructions, ingredients, time, img, difficulty, favorite, tags }}) {
   return knex("recipes")
     .returning("*")
-    .insert({ title, instructions, ingredients, time, img, difficulty, favorite, tags });
+    .insert({ title, instructions, ingredients: ingredients.join(', '), time, img, difficulty, favorite, tags });
 }
 //Find All
 function findRecipes() {
