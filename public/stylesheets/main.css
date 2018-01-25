@@ -1,3 +1,8 @@
+body {
+  background-image: url(../assets/background-img.jpg);
+  background-size: contain;
+}
+
 .nav-bar {
   max-width: 70%;
   margin: 0 auto;
