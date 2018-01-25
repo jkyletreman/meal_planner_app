@@ -10,6 +10,7 @@ const app = express();
 const PORT = process.env.PORT || '8000';
 
 const recipes = require('./routes/recipes');
+const ingredients = require('./routes/ingredients');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 
 // Routes
 app.use('/recipes', recipes);
+app.use('/ingredients', ingredients);
 app.use((err, req, res, next) => {
   res.sendStatus(404);
 });
