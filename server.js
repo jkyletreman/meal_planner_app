@@ -10,7 +10,6 @@ const app = express();
 const PORT = process.env.PORT || '8000';
 
 const recipes = require('./routes/recipes');
-const ingredients = require('./routes/ingredients');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
