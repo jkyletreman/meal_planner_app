@@ -1,12 +1,24 @@
 // jshint esversion: 6
 
+// Two problems
+  // * How to populate array(ingredients) for jQuery
+  // * How to add more than one suggestions
+    // -> data serialization?
+
+// add event listener for keydown to run autofill?
+
+// have a global variable to add ingredients to?
+  // * keep ingredient global array in local storage?
+
+// grab all the ingredients into a array then search that?
+
 // use jquery to help complete the form
 function mapIngredients(convertData) {
-   $("#ingredients").autofill( convertData );
+   $("#ingredients").autofill( arr );
 }
 
 // take json response and convert to an array for JQuery
-function convertData(fetchIngredients) {
+function convertJsonToArray(fetchIngredients) {
   var arr = Object.keys(obj).map(function(k) { return obj[k]; });
 }
 
@@ -19,11 +31,9 @@ function fetchIngredients(ingredientId) {
 }
 // get ingredient id (string) from route.
 // Will this handle more then one in a form
+// YAGNI?
 function ingredientId() {
-  const INGRE_ID = /^\/ingredients\/(\d+)/;
-  const match = INGRE_ID.exec(window.location.pathname);
-
-  if (!match) {return null;}
-
-  return match[1];
+  // target value? in input form
+  // return value in form of a route?
+  //
 }
