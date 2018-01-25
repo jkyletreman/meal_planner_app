@@ -8,11 +8,11 @@ const {
 } = require ("../models/recipes");
 
 app.get('/', (req, res) => {
-
+  res.send("Cool")
 });
 
 app.get('/new', (req, res) => {
-
+  res.send("whats up")
 });
 
 app.get('/:id', (req, res) => {
