@@ -11,7 +11,7 @@
     "start": "nodemon server.js",
     "knex": "knex",
     "db:migrate": "knex migrate:latest",
-    "postinstall": "npm run db:migrate",
+    "postinstall": "npm run db:migrate"
   },
   "repository": {
     "type": "git",
