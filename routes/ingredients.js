@@ -1,11 +1,11 @@
 // jshint esversion:6
 const app = require('knex').Router();
 
-// const {
-//   createIngredient,
-//   findIngredients,
-//   findIngredient
-// } = require ("../models/recipes");
+const {
+  createIngredient,
+  findIngredients,
+  findIngredient
+} = require ("../models/recipes");
 
 app.get('/', (req, res) => {
 
@@ -20,7 +20,11 @@ app.get('/:id', (req, res) => {
 });
 
 app.post('/new', (req, res) => {
+  createIngredient(req).then(ingredients => {
+    const ingredient = ingredients[0];
 
+    res.sendStatus("200");
+  });
 });
 
 app.patch('/:id', (req, res) => {
