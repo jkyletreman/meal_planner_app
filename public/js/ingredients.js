@@ -14,7 +14,11 @@
 
 // use jquery to help complete the form
 function mapIngredients(convertJsonToArray) {
-   $("#ingredients").autofill( arr );
+   $(".newIngredient").autofill([
+      'pizza',
+      'corn',
+      'hotdogs'
+   ]);
 }
 
 // take json response and convert to an array for JQuery

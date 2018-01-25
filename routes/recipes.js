@@ -38,6 +38,7 @@ app.get('/:id', (req, res) => {
 });
 
 app.post('/new', (req, res) => {
+  console.log(req.body)
   createRecipe(req).then(recipes => {
     const recipe = recipes[0];
 
