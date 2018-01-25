@@ -6,7 +6,10 @@ if (process.env.APP_MODE === undefined) {
 module.exports = {
  development: {
    client: 'pg',
-   connection: process.env.DATABASE_URL || "postgres://localhost:5432/meal_planner"
+   connection: process.env.DATABASE_URL || "postgres://localhost:5432/meal_planner",
+   seeds: {
+     directory: "./seeds"
+   }
  },
  production: {
    client: 'pg',

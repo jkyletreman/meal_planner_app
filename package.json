@@ -10,7 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
     "knex": "knex",
-    "postinstall": "knex migrate:latest"
+    "db:seed": "knex seed:run",
+    "db:migrate": "knex migrate:latest",
+    "postinstall": "npm run db:migrate && npm run db:seed",
   },
   "repository": {
     "type": "git",
