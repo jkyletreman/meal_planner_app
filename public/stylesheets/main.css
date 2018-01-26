@@ -1,3 +1,8 @@
+body {
+  background-image: url(../assets/background-img.jpg);
+  background-size: contain;
+}
+/* Header */
 .nav-bar {
   max-width: 70%;
   margin: 0 auto;
@@ -9,19 +14,40 @@
   margin: 0 auto;
 }
 
+@media all and (max-width: 720px) {
+  .desktop-card {
+    display: none;
+  }
+  .mobile-card {
+    display: block;
+    margin: 0 auto;
+    max-width: 70%
+  }
+  p {
+    color: white;
+  }
+}
+/* desktop */
 .card {
+  background-color: rgba(131, 163, 141, 0.86);
   max-width: 70%;
   margin: 0 auto;
   margin-bottom: 2%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
+@media all and (min-width: 721px) {
+  .mobile-card {
+    display: none;
+  }
+}
+
 img {
+  align-self: center;
   margin: 0 auto;
   max-width: 100%;
 }
 
-/* @media screen and (max-width: ) */
 
 h1, h6 {
   text-align: center;
@@ -30,5 +56,12 @@ h1, h6 {
 
 p {
   text-align: center;
+}
+/* mobile */
+.title {
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  font-size: 30px;
   text-decoration: underline;
 }

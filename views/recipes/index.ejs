@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,13 +22,13 @@
     </div>
   </div>
 
-
+<div class="desktop-card">
   <% recipes.forEach(recipe => { %>
     <div class="card">
       <div class="recipe-card">
         <div class="row card-image">
           <div class="col-4">
-            <img class="recipe-img" src="/assets/sample_img.jpeg" alt="<%= recipe.title %>">
+            <img class="recipe-img" src="<%= recipe.img %>" alt="<%= recipe.title %>">
           </div>
           <div class="col-8 card-information">
             <div class="row">
@@ -72,8 +71,33 @@
         </div>
       </div>
     </div>
-      <% }) %>
+    <% }) %>
+</div>
 
+<div class="mobile-card">
+  <% recipes.forEach(recipe => { %>
+  <div class="row">
+    <div class="col-12">
+      <p><%= recipe.title %></p>
+    </div>
+  </div>
+  <div class="row recipe-img">
+    <div class="col-12">
+      <img src="/assets/sample_img.jpeg" alt="">
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p><%= recipe.instructions %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p><%= recipe.ingredients %></p>
+      </div>
+    </div>
+      <% }) %>
+  </div>
 
     <!-- bootstrap -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

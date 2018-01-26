@@ -1,5 +1,7 @@
 body {
-  background-color: rgb(106, 141, 184);
+  background-image: url(../assets/form-default-2.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
   max-width: 70%;
   max-height: 80%;
   margin: 0 auto;
@@ -19,6 +21,10 @@ h5 {
 
 form {
   padding-top: 10%;
+}
+
+label {
+  color: white;
 }
 
 @media screen and (max-width: 600px) {

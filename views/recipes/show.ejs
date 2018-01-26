@@ -12,10 +12,22 @@
 
 <body>
 
-<div class="card container">
+  <div class="jumbotron">
+    <h1 class="page-title">Your New Recipe!</h1>
+    <div class="row nav-bar">
+      <div class="col-6">
+        <a class="center-me" href="/recipes/new">Create a New Recipe</a>
+      </div>
+      <div class="col-6">
+        <a class="center-me" href="/recipes">All Recipes</a>
+      </div>
+    </div>
+  </div>
+
+<div class="mobile-card">
   <div class="row">
     <div class="col-12">
-      <span><%= recipe.title %></span>
+      <p class="title"><%= recipe.title %></p>
     </div>
   </div>
   <div class="row recipe-img">
@@ -25,12 +37,12 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <span><%= recipe.instructions %></span>
+        <p><%= recipe.instructions %></p>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span><%= recipe.ingredients %></span>
+        <p><%= recipe.ingredients %></p>
       </div>
     </div>
   </div>
