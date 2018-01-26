@@ -24,6 +24,57 @@
     </div>
   </div>
 
+  <div class="desktop-card">
+      <div class="card">
+        <div class="recipe-card">
+          <div class="row card-image">
+            <div class="col-4">
+              <img class="recipe-img" src="<%= recipe.img %>" alt="<%= recipe.title %>">
+            </div>
+            <div class="col-8 card-information">
+              <div class="row">
+                <div class="col-12 card-title">
+                  <h6>
+                    <%= recipe.title %>
+                  </h6>
+                  <div class="row">
+                    <div class="col-4 card-time">
+                      <p>Time: <%= recipe.time %></p>
+                    </div>
+                    <div class="col-4 card-diff">
+                      <p>
+                        Difficulty: <%= recipe.difficulty %>
+                      </p>
+                    </div>
+                    <div class="col-4 card-fav">
+                      <p>
+                        Fan Fav: <%= recipe.favorite %>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 card-ingridents">
+                      <p>
+                        <%= recipe.ingredients %>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 card-instructions">
+                      <p>
+                        <%= recipe.instructions %>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
 <div class="mobile-card">
   <div class="row">
     <div class="col-12">
@@ -32,7 +83,7 @@
   </div>
   <div class="row recipe-img">
     <div class="col-12">
-      <img src="/assets/sample_img.jpeg" alt="">
+      <img src="<%= recipe.img %>" alt="">
     </div>
     </div>
     <div class="row">

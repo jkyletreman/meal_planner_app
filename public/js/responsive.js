@@ -1,4 +1,3 @@
-// unlinked
 $(() => {
   addIngredient.addEventListener('click', (e) => {
     const ingredients = e.target.parentElement;
@@ -6,7 +5,7 @@ $(() => {
     const index = ingredients.querySelectorAll('.newIngredient').length;
 
     ingredientInput.classList.add('newIngredient');
-    ingredientInput.setAttribute('name', `ingredient[${index}]`);
+    ingredientInput.setAttribute('name', `ingredients[${index}]`);
     ingredientInput.setAttribute('type', 'text');
     ingredientInput.setAttribute('list', "suggestions")
 
