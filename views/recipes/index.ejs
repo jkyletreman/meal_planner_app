@@ -71,14 +71,14 @@
         </div>
       </div>
     </div>
-      <% }) %>
+    <% }) %>
 </div>
 
 <div class="mobile-card">
   <% recipes.forEach(recipe => { %>
   <div class="row">
     <div class="col-12">
-      <span><%= recipe.title %></span>
+      <p><%= recipe.title %></p>
     </div>
   </div>
   <div class="row recipe-img">
@@ -88,12 +88,12 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <span><%= recipe.instructions %></span>
+        <p><%= recipe.instructions %></p>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <span><%= recipe.ingredients %></span>
+        <p><%= recipe.ingredients %></p>
       </div>
     </div>
       <% }) %>
