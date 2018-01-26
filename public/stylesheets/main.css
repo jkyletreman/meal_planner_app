@@ -2,7 +2,7 @@ body {
   background-image: url(../assets/background-img.jpg);
   background-size: contain;
 }
-
+/* Header */
 .nav-bar {
   max-width: 70%;
   margin: 0 auto;
@@ -14,6 +14,15 @@ body {
   margin: 0 auto;
 }
 
+@media all and (max-width: 720px) {
+  .desktop-card {
+    display: none;
+  }
+  .mobile-card {
+    display: block;
+  }
+}
+/* desktop */
 .card {
   max-width: 70%;
   margin: 0 auto;
@@ -26,7 +35,6 @@ img {
   max-width: 100%;
 }
 
-/* @media screen and (max-width: ) */
 
 h1, h6 {
   text-align: center;
