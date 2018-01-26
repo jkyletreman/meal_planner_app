@@ -1,4 +1,3 @@
-// unlinked
 $(() => {
   addIngredient.addEventListener('click', (e) => {
     const ingredients = e.target.parentElement;
