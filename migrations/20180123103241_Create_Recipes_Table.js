@@ -6,10 +6,10 @@ exports.up = function(knex, Promise) {
     table.string("instructions").defaultTo("no instructions available"); // why is not null failing here?
     table.string("ingredients").defaultTo("no ingredients available");
     table.string("time").defaultTo("no time information available");
-    table.text("img").notNull().defaultTo('/assets/default-img.jpg');
-    table.enu("difficulty", ['easy', 'medium', 'hard', 'expert']).defaultTo('medium');
-    table.boolean("favorite").defaultTo(false);
-    table.enu("tags", ['chicken', 'beef', 'vegetarian', 'fish']);
+    table.text("img").defaultTo("/assets/default-img.jpg");
+    table.string("difficulty").defaultTo('easy');
+    table.string("favorite", [ 'yes', 'no']).defaultTo('no');
+    table.string("tags", ['chicken', 'beef', 'vegetarian', 'fish']);
     table.timestamps(true, true);
   });
 };
